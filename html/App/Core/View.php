@@ -31,7 +31,7 @@ class View
 
   public static function setTemplate($args = array())
   {
-    $template = PATH_APP;
+    $template = PATH_MOD;
     $template .= 'Templates' . DS;
     $template .= strtolower($args['template']);
     $template .= '.phtml';
@@ -47,10 +47,10 @@ class View
 
 
   /*
-    * rendering the page - View.php
-    * @params   array   $paths
-    * @params   array   $data
-    */
+   * rendering the page - View.php
+   * @params   array   $paths
+   * @params   array   $data
+   */
   public static function render($args = array(), $meta = array(), $trans = array(), $data = array())
   {
     try {
@@ -72,9 +72,9 @@ class View
 
 
   /*
-    * Path checking at View base level - View.php
-    * @params   array   $file
-    */
+   * Path checking at View base level - View.php
+   * @params   array   $file
+   */
   public static function checkFile($file)
   {
     if (!is_readable($file)) {
